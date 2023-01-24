@@ -2,6 +2,7 @@ import { Express } from "express";
 import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import cors from 'cors';
+import dreamRoutes from './routes/dreamRoutes.js'
 
 //General Setup
 const app = express();
@@ -9,6 +10,9 @@ const app = express();
 app.use(bodyParser.json({extended: true}));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(cors());
+
+//Express Middleware to connect router application
+app.use('/dreams', dreamRoutes)
 
 
 //MongoDB Setup
