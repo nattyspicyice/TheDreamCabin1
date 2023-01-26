@@ -7,6 +7,11 @@ import dreamRoutes from './routes/dreamRoutes.js'
 //General Setup
 const app = express();
 
+//Routes
+app.get('/', (req, res) => {
+    res.send("Express is here")
+})
+
 app.use(bodyParser.json({extended: true}));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(cors());
