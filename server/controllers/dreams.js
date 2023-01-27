@@ -1,10 +1,11 @@
 //imports model
 import Dream from '../models/dreamModel.js';
+import mongoose from 'mongoose';
 
 //exporting CRUD functions
 export const getDreams = async (req, res) => {
     try {
-        const dreams = await Dream.find({entry: req.body.entry, hoursOfSleep: req.body.hoursOfSleep});
+        const dreams = await Dream.find();
         console.log(dreams);
         res.status(200).json(dreams);
     } catch (error) {
@@ -13,12 +14,12 @@ export const getDreams = async (req, res) => {
 };
 
 export const createDream = async (req, res) => {
-    const dream = req.body
-    const newDream = new Dream(dream);
+    const { entry, hoursOfSleep } = req.body
+    const newDream = new Dream({ entry, hoursOfSleep });
 
     try {
-        await newDream.save({entry: req.body.entry, hoursOfSleep: req.body.hoursOfSleep});
-        res.status(201).json(dream);
+        await newDream.save();
+        res.status(201).json(newDream);
     } catch (error) {
         res.status(409).json({ message: error.message });
     };

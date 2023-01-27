@@ -1,6 +1,7 @@
 import React from "react";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import axios from "axios"
 
 import { useState } from "react";
 
@@ -9,15 +10,16 @@ const DreamForm = () => {
     entry: '', hoursOfSleep: [0]
   });
 
-  const handleSubmit = (event) => {
-    //prevents the submit button from refreshing the page
+  const createDream = (event) => {
     event.preventDefault();
-    console.log(dreamData)
 
-    //clears the input fields after submitting
-    setDreamData({entry:'', hoursOfSleep:[0]});
-  }
+    axios
+    .post('/', dreamData)
+    .then((res) => console.log(res))
+    .catch((err) => console.log(err));
+  };
 
+  //need clear function after the form has been submitted
 
   return(
       <div style={{
@@ -30,7 +32,7 @@ const DreamForm = () => {
         margin: "20px",
         borderRadius: "12pt"}}>
 
-        <Form onSubmit={handleSubmit}>
+        <Form>
           <Form.Group className="mb-3" controlId="formBasicText">
             <Form.Label>Keep Dreamin'...</Form.Label>
             <Form.Control
@@ -42,10 +44,7 @@ const DreamForm = () => {
           </Form.Group>
           <Form.Group style={{display: "flex", justifyContent: "space-between", paddingRight: "30px", paddingLeft: "30px"}}>
           <Form.Label>Hours of Sleep</Form.Label>
-            <select onChange={(event) => setDreamData({ ...dreamData, hoursOfSleep: event.target.value })}>
-
-              {/* these options aren't been read as numbers, but it logs the user input anyway */}
-
+            <Form.Control as="select" onChange={(event) => setDreamData({ ...dreamData, hoursOfSleep: event.target.value })}>
               <option value={dreamData.hoursOfSleep[9]}>9+ hours</option>
               <option value={dreamData.hoursOfSleep[8]}>8 hours</option>
               <option value={dreamData.hoursOfSleep[7]}>7 hours</option>
@@ -56,10 +55,10 @@ const DreamForm = () => {
               <option value={dreamData.hoursOfSleep[2]}>2 hours</option>
               <option value={dreamData.hoursOfSleep[1]}>1 hour</option>
               <option value={dreamData.hoursOfSleep[0]}>No Sleep</option>
-            </select>
+            </Form.Control>
           </Form.Group>
           <Form.Group style={{display: "flex", justifyContent: "center", paddingTop: "20px"}}>
-            <Button onClick={handleSubmit} variant="light" type="submit" style={{width: "100%", border: "1pt solid grey"}}>
+            <Button onClick={createDream} variant="light" type="submit" style={{width: "100%", border: "1pt solid grey"}}>
               Submit
             </Button>
           </Form.Group>
@@ -69,3 +68,4 @@ const DreamForm = () => {
 }
 
 export default DreamForm;
+
