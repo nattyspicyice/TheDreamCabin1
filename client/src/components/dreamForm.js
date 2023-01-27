@@ -23,15 +23,13 @@ const DreamForm = () => {
 
   return(
       <div style={{
-        width: "25%",
+        width: "350px",
         textAlign: "left",
-        padding: "20px",
         border: "1pt solid grey",
         background: "lightblue",
         color: "black",
-        margin: "20px",
+        padding: "20px",
         borderRadius: "12pt"}}>
-
         <Form>
           <Form.Group className="mb-3" controlId="formBasicText">
             <Form.Label>Keep Dreamin'...</Form.Label>
