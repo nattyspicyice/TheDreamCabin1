@@ -2,23 +2,17 @@ import express from "express";
 import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import cors from 'cors';
+
 import dreamRoutes from './routes/dreamRoutes.js'
 
-//General Setup
 const app = express();
 
-//Routes
-app.get('/', (req, res) => {
-    res.send("Express is here")
-})
-
+//Middleware
 app.use(bodyParser.json({extended: true}));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(cors());
 
-//Express Middleware to connect router application
-app.use('/dreams', dreamRoutes)
-
+app.use('/', dreamRoutes)
 
 //MongoDB Setup
 const CONNECTION_URL = "mongodb+srv://nattyspickle:nattyspickle@sei.ssf6lll.mongodb.net/?retryWrites=true&w=majority"

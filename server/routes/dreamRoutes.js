@@ -1,13 +1,15 @@
 //Import
 import express from "express";
-import { getDreams, createDream } from "../controllers/dreams";
 
-//Route Setup
+//imported functions from controllers
+import { getDreams, createDream } from "../controllers/dreams.js";
+
+//Router Setup
 const router = express.Router();
 
 //Routes
 router.get('/', getDreams);
-router.get('/', createDream)
+router.post('/', createDream);
 
 //Export
 export default router;

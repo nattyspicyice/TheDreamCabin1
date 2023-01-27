@@ -1,16 +1,17 @@
 import React from "react";
+import { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 //imported components
 import NavBar from "./components/NavBar";
-import Form from "./components/dreamForm";
-
+import DreamForm from "./components/DreamForm";
+import EntryCard from "./components/EntryCard";
 
 const App = () => {
     return(
         <div>
             <NavBar />
-            <Form />
+            <DreamForm />
         </div>    
     )
 }
