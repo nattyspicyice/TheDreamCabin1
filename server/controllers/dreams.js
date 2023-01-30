@@ -6,9 +6,9 @@ import mongoose from 'mongoose';
 
 //READ
 export const getDreams = async (req, res) => {
-    const { entry, hoursOfSleep } = req.body
+    // const { entry, hoursOfSleep } = req.body
     try {
-        const dreams = await Dream.find({ entry, hoursOfSleep });
+        const dreams = await Dream.find({});
         console.log(dreams);
         res.status(200).json(dreams);
     } catch (error) {

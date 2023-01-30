@@ -1,20 +1,25 @@
-import {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios'
 import EntryCard from './EntryCard';
 
+
 function Entries () {
-    const [savedDreams, setSavedDreams] = useState(null);
+    const [savedDreams, setSavedDreams] = useState([]);
     
-    useEffect(() => {
+  useEffect(() => {
         axios
         .get('http://localhost:8000')
         .then((res) => setSavedDreams(res.data))
         .catch((err) => console.log(err));
     }, []);
- console.log(savedDreams)
+
+    console.log(savedDreams)
+
     return(
         <div>
-            <EntryCard dreams = {savedDreams}/>
+            {savedDreams.map((dream) => (
+                <EntryCard key={dream._id} dream={dream} />
+            ))}
         </div>
     )
 }
