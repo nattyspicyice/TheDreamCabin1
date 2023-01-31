@@ -4,15 +4,19 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card'
 
 
-const EntryCard = ({dream}) => {
+const EntryCard = ({dream, updated, setUpdated}) => {
 
     const deleteDream = async () => {
         await axios
         .delete(`${dream._id}`)
-        .then((res) => console.log(res))
+        .then((res) => setUpdated(!updated))
         .catch((err) => console.log(err));
     }
 
+    const updateDream = async () => {
+        await
+    }
+ 
     return(
         <Card style={{display: "flex", justifyContent: "space-around", border: "1pt solid grey", background: "lightblue", width: "300px", height: "auto"}}>
             <Card.Body>

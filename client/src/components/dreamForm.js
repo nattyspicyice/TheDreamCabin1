@@ -5,7 +5,8 @@ import Form from 'react-bootstrap/Form';
 import axios from "axios"
 
 
-const DreamForm = () => {
+const DreamForm = ({updated, setUpdated}) => {
+
   const [dreamData, setDreamData] = useState({
     entry: '', hoursOfSleep: 0
   });
@@ -15,13 +16,14 @@ const DreamForm = () => {
 
     await axios
     .post('http://localhost:8000', dreamData)
-    .then((res) => console.log(res))
+    .then((res) => setUpdated(!updated))
     .catch((err) => console.log(err));
-
-    console.log("test")
+    
+    setDreamData({
+      entry: '', hoursOfSleep: ''
+    })
   };
 
-  
 
   return(
       <div style={{
