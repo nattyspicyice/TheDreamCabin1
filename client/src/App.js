@@ -11,20 +11,18 @@ import Dashboard from "./pages/Dashboard";
 const App = () => {
     return(
         <div className="App">
-            <BrowserRouter>
             <div>
                 <NavBar />
             </div>
                 <div className="pages">
-                    <Routes>
+                    {/* <Routes>
                         <Route path = '/' element={<Dashboard />}></Route>
-                    </Routes>
+                    </Routes> */}
                 </div>
                 <div>
                     <DreamForm />
                     <Entries />
                 </div>
-            </BrowserRouter>
         </div>    
     );
 }

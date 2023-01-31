@@ -6,9 +6,9 @@ import Card from 'react-bootstrap/Card'
 
 const EntryCard = ({dream}) => {
 
-    const deleteDream = async (id) => {
+    const deleteDream = async () => {
         await axios
-        .delete(`http://localhost:8000/${id}`)
+        .delete(`${dream._id}`)
         .then((res) => console.log(res))
         .catch((err) => console.log(err));
     }

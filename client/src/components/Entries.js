@@ -8,7 +8,7 @@ function Entries () {
     
   useEffect(() => {
         axios
-        .get('http://localhost:8000') //backend server
+        .get('http://localhost:8000/') //backend server
         .then((res) => setSavedDreams(res.data))
         .catch((err) => console.log(err));
     }, []);

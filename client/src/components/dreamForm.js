@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useDreamsContext } from '../hooks/useDreamsContext.js'
+// import { useDreamsContext } from '../hooks/useDreamsContext.js'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import axios from "axios"
@@ -13,13 +13,15 @@ const DreamForm = () => {
   const createDream = async (event) => {
     event.preventDefault();
 
-    axios
-    .post('/', dreamData)
+    await axios
+    .post('http://localhost:8000', dreamData)
     .then((res) => console.log(res))
     .catch((err) => console.log(err));
+
+    console.log("test")
   };
 
-  //need clear function after the form has been submitted
+  
 
   return(
       <div style={{
@@ -30,7 +32,7 @@ const DreamForm = () => {
         color: "black",
         padding: "20px",
         borderRadius: "12pt"}}>
-        <Form>
+        <Form onSubmit={createDream}>
           <Form.Group className="mb-3" controlId="formBasicText">
             <Form.Label>Keep Dreamin'...</Form.Label>
             <Form.Control
@@ -56,7 +58,7 @@ const DreamForm = () => {
             </Form.Control>
           </Form.Group>
           <Form.Group style={{display: "flex", justifyContent: "center", paddingTop: "20px"}}>
-            <Button onSubmit={createDream} variant="light" type="submit" style={{width: "100%", border: "1pt solid grey"}}>
+            <Button variant="light" type="submit" style={{width: "100%", border: "1pt solid grey"}}>
               Submit
             </Button>
           </Form.Group>
@@ -66,4 +68,3 @@ const DreamForm = () => {
 }
 
 export default DreamForm;
-
