@@ -11,7 +11,7 @@ const EntryCard = ({dream, updated, setUpdated}) => {
     ///DELETE
     const deleteDream = async () => {
         await axios
-        .delete(`${dream._id}`)
+        .delete(`https://the-dream-cabin-backend-2.onrender.com/${dream._id}`)
         .then((res) => setUpdated(!updated))
         .catch((err) => console.log(err));
     }
