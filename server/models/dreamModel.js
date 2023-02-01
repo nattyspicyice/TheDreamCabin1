@@ -6,7 +6,7 @@ const dreamSchema = mongoose.Schema({
         required: true
     },
     hoursOfSleep: {
-        type: Number,
+        type: String,
         required: true
     }
 }, {timestamps: true});

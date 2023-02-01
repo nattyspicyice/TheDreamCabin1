@@ -10,9 +10,9 @@ const router = express.Router();
 //Routes
 router.get('/', getAllDreams);
 router.get('/:id', getDream);
+router.put('/:id', updateDream);
 router.post('/', createDream);
-router.patch('/:id', updateDream)
-router.delete('/:id', deleteDream)
+router.delete('/:id', deleteDream);
 
 //Export
 export default router;

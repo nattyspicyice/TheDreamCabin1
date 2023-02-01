@@ -21,7 +21,7 @@ export const getDream = async (req, res) => {
 export const getAllDreams = async (req, res) => {
     try {
         const dreams = await Dream.find({});
-        console.log(dreams);
+        // console.log(dreams);
         res.status(200).json(dreams);
     } catch (error) {
         res.status(404).json({message: error.message})
@@ -44,7 +44,7 @@ export const createDream = async (req, res) => {
 //UPDATE (PUT or PATCH)
 export const updateDream = async (req, res) => {
     const { id } = req.params;
-
+    // console.log(id)
     if (!mongoose.Types.ObjectId.isValid(id)) {
         return res.status(404).json({error: 'No Such Dream Exists'})
     }  
