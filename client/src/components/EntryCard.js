@@ -49,7 +49,7 @@ const EntryCard = ({dream, updated, setUpdated}) => {
         event.preventDefault();
         
         axios
-        .put(`http://localhost:8000/${dream._id}`, updatedDream)
+        .put(`https://the-dream-cabin-backend-2.onrender.com/${dream._id}`, updatedDream)
         .then((res) => setUpdated(!updated))
         .catch((err) => console.log(err))
 

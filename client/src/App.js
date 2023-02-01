@@ -16,16 +16,13 @@ const App = () => {
     const [updated, setUpdated] = useState(false);
     useEffect(() => {
         axios
-        .get('http://localhost:8000/') //backend server
+        .get('https://the-dream-cabin-backend-2.onrender.com/') //backend server
         .then((res) => setSavedDreams(res.data))
         .catch((err) => console.log(err));
     }, [updated]);
 
     return(
         <div className="App">
-            {/* <div>
-                <NavBar />
-            </div> */}
                 <div className="pages">
                 <BrowserRouter>
                     <Routes>
@@ -34,25 +31,8 @@ const App = () => {
                     </Routes>
                 </BrowserRouter>
                 </div>
-                {/* <div>
-                    <DreamForm  setUpdated = {setUpdated} updated = {updated} />
-                    <Entries savedDreams = {savedDreams} setUpdated = {setUpdated} updated = {updated}/>
-                </div> */}
         </div>    
     );
 }
 
 export default App;
-
-
-{/* <div >
-            <NavBar />
-            <div style={{
-                display: "flex",
-                margin: "20px",
-                gap: "20px"
-            }}>
-                <DreamForm />
-                <Entries />
-            </div>
-            </div> */}
