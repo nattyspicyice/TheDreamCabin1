@@ -15,7 +15,7 @@ const DreamForm = ({updated, setUpdated}) => {
     event.preventDefault();
 
     await axios
-    .post('https://the-dream-cabin-backend-2.onrender.com/', dreamData)
+    .post('https://the-dream-cabin-backend-2.onrender.com', dreamData)
     .then((res) => setUpdated(!updated))
     .catch((err) => console.log(err));
     
