@@ -13,7 +13,7 @@ const Dashboard = () => {
     const [updated, setUpdated] = useState(false);
     useEffect(() => {
         axios
-        .get('http://localhost:8000/') //backend server
+        .get('https://the-dream-cabin-backend-2.onrender.com/') //backend server
         .then((res) => setSavedDreams(res.data))
         .catch((err) => console.log(err));
     }, [updated]);
@@ -22,7 +22,7 @@ const Dashboard = () => {
         <div>
             <NavBar/>
             <div>
-                    <DreamForm  setUpdated = {setUpdated} updated = {updated} />
+                    <DreamForm setUpdated = {setUpdated} updated = {updated} />
                     <Entries savedDreams = {savedDreams} setUpdated = {setUpdated} updated = {updated}/>
             </div>
         </div>
