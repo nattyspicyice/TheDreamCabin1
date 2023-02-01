@@ -1,12 +1,9 @@
-// import {useEffect} from 'react';
 import axios from 'axios';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card'
 import Modal from "react-bootstrap/Modal"
 import Form from "react-bootstrap/Form"
-import { useEffect, useState } from 'react';
-import {useParams} from 'react-router-dom'
-
+import { useState } from 'react';
 
 
 const EntryCard = ({dream, updated, setUpdated}) => {
@@ -57,10 +54,7 @@ const EntryCard = ({dream, updated, setUpdated}) => {
         .catch((err) => console.log(err))
 
         handleClose();
-        
     }
-
-
 
     return(
         <div>
@@ -77,7 +71,7 @@ const EntryCard = ({dream, updated, setUpdated}) => {
             </Card.Body>
         </Card>
 
-        {/* ////// */}
+        {/* MODAL EDIT FORM */}
 
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
