@@ -9,7 +9,8 @@ What it does:
 Figma, Trello, MongoDB
 
 ## Link To Project Plan:
-https://github.com/nattyspicyice/TheDreamCabin1
+
+Trello: https://trello.com/b/MunyiOUS/the-dream-cabin
 
 ## Unsolved Problems:
 

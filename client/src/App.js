@@ -8,6 +8,7 @@ import NavBar from "./components/NavBar";
 import DreamForm from "./components/DreamForm";
 import Entries from "./components/Entries";
 import Dashboard from "./pages/Dashboard";
+import Login from "./pages/Login";
 import axios from "axios";
 
 const App = () => {
@@ -22,18 +23,21 @@ const App = () => {
 
     return(
         <div className="App">
-            <div>
+            {/* <div>
                 <NavBar />
-            </div>
+            </div> */}
                 <div className="pages">
-                    {/* <Routes>
-                        <Route path = '/' element={<Dashboard />}></Route>
-                    </Routes> */}
+                <BrowserRouter>
+                    <Routes>
+                        <Route path = '/' element={<Dashboard/>}/>
+                        <Route path ='/login' element={<Login/>}/>
+                    </Routes>
+                </BrowserRouter>
                 </div>
-                <div>
+                {/* <div>
                     <DreamForm  setUpdated = {setUpdated} updated = {updated} />
                     <Entries savedDreams = {savedDreams} setUpdated = {setUpdated} updated = {updated}/>
-                </div>
+                </div> */}
         </div>    
     );
 }

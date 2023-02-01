@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import { useDreamsContext } from '../hooks/useDreamsContext.js'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import axios from "axios"
@@ -10,6 +9,7 @@ const DreamForm = ({updated, setUpdated}) => {
   const [dreamData, setDreamData] = useState({
     entry: '', hoursOfSleep: 0
   });
+
 
   const createDream = async (event) => {
     event.preventDefault();
@@ -23,7 +23,6 @@ const DreamForm = ({updated, setUpdated}) => {
       entry: '', hoursOfSleep: ''
     })
   };
-
 
   return(
       <div style={{
