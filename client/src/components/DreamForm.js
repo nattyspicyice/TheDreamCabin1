@@ -25,8 +25,7 @@ const DreamForm = ({updated, setUpdated}) => {
   };
 
   return(
-      <div style={{
-        width: "350px",
+      <div className="form" style={{
         textAlign: "left",
         border: "1pt solid grey",
         background: "lightblue",

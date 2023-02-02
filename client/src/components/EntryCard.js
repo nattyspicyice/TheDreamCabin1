@@ -60,10 +60,12 @@ const EntryCard = ({dream, updated, setUpdated}) => {
         <div>
         <Card style={{display: "flex", justifyContent: "space-around", border: "1pt solid grey", background: "lightblue", width: "300px", height: "auto"}}>
             <Card.Body>
-                <Card.Text style={{background: "white", height: "auto", maxHeight: "100%", border: "1pt solid lightgrey", borderRadius: "5pt"}}>
+                <Card.Text style={{background: "white", height: "auto", minHeight: "200px", border: "1pt solid lightgrey", borderRadius: "5pt"}}>
                 {dream.entry}
                 </Card.Text>
-                {dream.hoursOfSleep}
+                <Card.Text style={{textAlign: "center"}}>
+                {dream.hoursOfSleep} Hours of Sleep
+                </Card.Text>
                 <div style={{display: "flex", justifyContent: "space-around"}}>
                     <Button onClick={updateDream} variant='light' style={{border: "1pt solid grey", width: "45%"}}>Edit</Button>
                     <Button onClick={deleteDream} variant='light' style={{border: "1pt solid grey", width: "45%"}}>Delete</Button>
@@ -79,7 +81,7 @@ const EntryCard = ({dream, updated, setUpdated}) => {
                         Update Dream
                     </Modal.Title>
                 </Modal.Header>
-                <Form onSubmit={saveUpdatedDream}>
+                <Form className ="editform" onSubmit={saveUpdatedDream}>
                     <Form.Group>
                         <Form.Label>Edit Entry</Form.Label>
                         <Form.Control name="entry" value={updatedDream.entry || ""} onChange={(event) => setUpdatedDream({...updatedDream, entry: event.target.value})}>
@@ -101,8 +103,8 @@ const EntryCard = ({dream, updated, setUpdated}) => {
                         </Form.Control>
                     </Form.Group>
                     <Modal.Footer>
-                        <Button onClick={handleClose}>Close</Button>
-                        <Button type="submit">Save Changes</Button>
+                        <Button variant="dark" onClick={handleClose}>Close</Button>
+                        <Button variant="dark" type="submit">Save Changes</Button>
                     </Modal.Footer>
                 </Form>
             </Modal>

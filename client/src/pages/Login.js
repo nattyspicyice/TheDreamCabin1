@@ -9,7 +9,9 @@ const Login = () => {
     const navigate = useNavigate();
     return (
         <div className='login'>
-            <h1>The Dream Cabin</h1>
+            <div style={{textAlign: "center"}}>
+                <h1>The Dream Cabin</h1>
+            </div>
             <Form>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Username</Form.Label>

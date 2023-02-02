@@ -21,7 +21,7 @@ const Dashboard = () => {
     return(
         <div>
             <NavBar/>
-            <div>
+            <div className="dashboard">
                 <DreamForm setUpdated = {setUpdated} updated = {updated} />
                 <Entries savedDreams = {savedDreams} setUpdated = {setUpdated} updated = {updated}/>
             </div>
