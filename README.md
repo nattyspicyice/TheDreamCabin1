@@ -25,15 +25,25 @@ Trello: https://trello.com/b/MunyiOUS/the-dream-cabin
 
 ## Deployment
 
-Link: [insert link]
+Link: https://dashboard.render.com/static/srv-cfdfblha6gdja6bfpak0/events
 
 ## Unsolved Problems:
-
-As of 2/1, I cannot get the front end to successfully deploy on Render.com
+- Needs better styling, it's purely functional at this point
 
 ## Future Enhancements:
 - quantify the sleep quality
 - authorization & authentication 
+- better styling
+
+## Biggest Challenges
+- frontend update function was SUPER difficult
+- Front end routing is hard.
+- Deploying the frontend was difficult due to casing issue.
+- React is hard. period.
+
+## Biggest Takeaways
+- I finally understand how the front end fetches data from the backend on a conceptual level
+- I am finally feeling more confident when it comes to CSS positioning using Flexbox.
 
 ## Authors & Contributors
 
