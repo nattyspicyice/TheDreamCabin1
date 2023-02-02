@@ -22,8 +22,8 @@ const Dashboard = () => {
         <div>
             <NavBar/>
             <div>
-                    <DreamForm setUpdated = {setUpdated} updated = {updated} />
-                    <Entries savedDreams = {savedDreams} setUpdated = {setUpdated} updated = {updated}/>
+                <DreamForm setUpdated = {setUpdated} updated = {updated} />
+                <Entries savedDreams = {savedDreams} setUpdated = {setUpdated} updated = {updated}/>
             </div>
         </div>
     )
