@@ -29,6 +29,8 @@ Link: [insert link]
 
 ## Unsolved Problems:
 
+As of 2/1, I cannot get the front end to successfully deploy on Render.com
+
 ## Future Enhancements:
 - quantify the sleep quality
 - authorization & authentication 
