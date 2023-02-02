@@ -7,7 +7,10 @@ What it does:
 
 The Dream Cabin is a place to log down all your dreams, as we often quickly forget them upon waking up. This application features a submission form, complete with an entry field and a dropdown menu to list the hours of sleep for that night. 
 
-[insert screenshots here]
+![This is an image](client/src/images/dashboard.png)
+![This is an image](client/src/images/edit.png)
+![This is an image](client/src/images/login.png)
+
 
 ## Technologies Used:
 Figma, Trello
