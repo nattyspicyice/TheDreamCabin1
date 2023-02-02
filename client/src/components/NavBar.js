@@ -13,7 +13,7 @@ const NavBar = () => {
         <Navbar.Collapse id="basic-navbar-nav">
         </Navbar.Collapse>
         <Nav>
-            <Nav.Link href="https://the-dream-cabin-backend-2.onrender.com/login">Logout</Nav.Link>
+            <Nav.Link href="/login">Logout</Nav.Link>
         </Nav>
       </Container>
     </Navbar>

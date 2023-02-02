@@ -18,7 +18,7 @@ const Login = () => {
                     <Form.Label>Password</Form.Label>
                     <Form.Control size='lg' type="password" placeholder="Enter password" />
                 </Form.Group>
-                <Link to='/'><Button size='lg' variant="dark" type="submit">
+                <Link to='/'><Button size='lg' variant="dark" type="submit"> 
                     Login
                 </Button>
                 </Link>
