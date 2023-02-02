@@ -3,8 +3,10 @@ import React from "react";
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
+import { useNavigate } from "react-router-dom";
 
 const NavBar = () => {
+  const navigate = useNavigate();
     return(
         <Navbar bg="dark" expand="lg" variant="dark">
       <Container>
@@ -13,7 +15,7 @@ const NavBar = () => {
         <Navbar.Collapse id="basic-navbar-nav">
         </Navbar.Collapse>
         <Nav>
-            <Nav.Link href="/login">Logout</Nav.Link>
+            <Nav.Link onClick={() => {navigate('/login')}}>Logout</Nav.Link>
         </Nav>
       </Container>
     </Navbar>

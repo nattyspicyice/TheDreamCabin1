@@ -2,10 +2,11 @@ import React from 'react'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 const Login = () => {
-    
+    const navigate = useNavigate();
     return (
         <div className='login'>
             <h1>The Dream Cabin</h1>
@@ -18,10 +19,9 @@ const Login = () => {
                     <Form.Label>Password</Form.Label>
                     <Form.Control size='lg' type="password" placeholder="Enter password" />
                 </Form.Group>
-                <Link to='/'><Button size='lg' variant="dark" type="submit"> 
+                <Button onClick ={() => {navigate('/')}} size='lg' variant="dark" type="submit"> 
                     Login
                 </Button>
-                </Link>
             </Form>
         </div>
     )
