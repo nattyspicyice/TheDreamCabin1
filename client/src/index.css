@@ -1,3 +1,10 @@
+body {
+    background-color: #030112;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%234A434F' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23757885'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
 .dashboard {
     display: flex;
     margin: 30px;
@@ -12,9 +19,113 @@
 }
 
 .form {
-    min-width: 350px;
+    max-width: 60%;
     margin-right: 20px;
-    max-height: 430px;
+    height: 100%;
+    text-align: center;
+    background: rgb(34, 29, 48);
+    color: rgb(240, 237, 242);
+    padding: 20px;
+    border-radius: 12pt;
+    min-width: 398px;
+}
+
+.form-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.entry-field {
+    background-color: rgb(34, 29, 48);
+    border: 1px solid rgb(131, 128, 133);
+    padding: 10px 10px 200px 10px;
+    color: rgb(240, 237, 242);
+    overflow: auto;
+}
+
+.entry-field:focus{
+    background-color: rgb(34, 29, 48);
+    border: 1px solid rgb(104, 102, 106);
+    padding: 10px 10px 200px 10px;
+    color: rgb(240, 237, 242);
+    overflow: auto;
+}
+.hoursOfSleep{ 
+    font-size: 17px;
+    padding-top: 8px;
+}
+
+.drop-down {
+    background-color: rgb(34, 29, 48);
+    color: rgb(240, 237, 242);
+    font-size: 18px;
+    text-align: center;
+    width: 50%;
+    cursor: pointer;
+}
+
+.drop-down:focus{
+    background-color: rgb(34, 29, 48);
+    color: rgb(240, 237, 242);
+}
+
+.button {
+   background-image: radial-gradient(100% 100% at 100% 0, #7bb3fb 0, #56177a 100%);
+   box-shadow: rgba(1, 1, 2, 0.979) 0 2px 4px,rgba(45, 35, 66, 0.956) 0 7px 13px -3px,rgba(52, 27, 56, 0.954) 0 -3px 0 inset;
+   width: 100%;
+   border: 0;
+   color: rgb(253, 251, 255);
+   cursor: pointer;
+   justify-content: center;
+   transition: box-shadow .15s,transform .15s;
+   user-select: none;
+   -webkit-user-select: none;
+   touch-action: manipulation;
+   white-space: nowrap;
+   will-change: box-shadow,transform;
+}
+
+.button:focus {
+    /* box-shadow: #3f404a 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #070a20 0 -3px 0 inset; */
+    color: rgb(253, 251, 255);
+  }
+  
+  .button:hover {
+    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #090c26 0 -3px 0 inset;
+    transform: translateY(-2px);
+    color: rgb(253, 251, 255);
+
+  }
+  
+  .button:active {
+    box-shadow: #000000 0 3px 7px inset;
+    transform: translateY(2px);
+    color: rgb(253, 251, 255);
+  }
+
+.entryCard {
+    display: flex;
+    justify-content: space-around;
+    background: rgb(56, 52, 69);
+    width: 300px;
+    height: auto;
+}
+
+.cardText {
+    background:  rgb(56, 52, 69);
+    height: auto;
+    max-height: 300px;
+    border: 1px solid rgb(104, 102, 106);
+    border-radius: 5pt;
+    color: rgb(194, 188, 198);
+    padding: 10px 10px 10px 10px;
+    overflow: auto;
+
+}
+
+.hoursOfSleepCard{
+    color: rgb(194, 188, 198);
+
 }
 
 .editform {
@@ -23,4 +134,15 @@
 
 .login {
     margin: 100px;
+    color: rgb(219, 218, 220);
+    /* width: 40%;
+    display: flex;
+    justify-content: center;   */
+      
+}
+
+.theDreamCabin {
+    color: rgb(219, 218, 220);
+    font-weight: bold;
+    text-align: center;
 }

@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 const NavBar = () => {
   const navigate = useNavigate();
     return(
-        <Navbar bg="dark" expand="lg" variant="dark">
+        <Navbar className="nav" bg="dark" expand="lg" variant="dark">
       <Container>
         <Navbar.Brand>The Dream Cabin</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
