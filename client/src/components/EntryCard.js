@@ -1,4 +1,5 @@
 import axios from 'axios';
+import moment from "moment";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card'
 import Modal from "react-bootstrap/Modal"
@@ -36,8 +37,6 @@ const EntryCard = ({dream, updated, setUpdated}) => {
         handleShow();
     };
 
-  
-
     const handleChange = (event) => {
         setUpdatedDream({
             ...updatedDream,
@@ -60,6 +59,9 @@ const EntryCard = ({dream, updated, setUpdated}) => {
         <div>
         <Card className="entryCard">
             <Card.Body>
+                <Card.Text className='date'>
+                    {moment(dream.createdAt).format('MM/DD/YYYY')}
+                </Card.Text>
                 <Card.Text className='cardText'>
                 {dream.entry}
                 </Card.Text>

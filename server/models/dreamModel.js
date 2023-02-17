@@ -9,7 +9,17 @@ const dreamSchema = mongoose.Schema({
         type: String,
         required: true
     }
-}, {timestamps: true});
+}, 
+
+// {timestamps: true},
+
+{
+    createdAt: {
+        type: Date,
+        default: new Date()
+    }
+})
+
 
 const Dream = mongoose.model('Dream', dreamSchema);
 
