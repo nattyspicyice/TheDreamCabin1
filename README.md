@@ -8,8 +8,8 @@ What it does:
 The Dream Cabin is a place to log down all your dreams, as we often quickly forget them upon waking up. This application features a submission form, complete with an entry field and a dropdown menu to list the hours of sleep for that night. 
 
 ![This is an image](client/src/images/dashboard.png)
-![This is an image](client/src/images/edit.png)
-![This is an image](client/src/images/login.png)
+![This is an image](client/src/images/update-function.png)
+![This is an image](client/src/images/login-page.png)
 
 
 ## Technologies Used:
@@ -25,15 +25,14 @@ Trello: https://trello.com/b/MunyiOUS/the-dream-cabin
 
 ## Deployment
 
-Link: https://dashboard.render.com/static/srv-cfdfblha6gdja6bfpak0/events
+Link: https://the-dream-cabin-frontend2.onrender.com/
 
 ## Unsolved Problems:
-- Needs better styling, it's purely functional at this point
+- n/a
 
 ## Future Enhancements:
 - quantify the sleep quality
 - authorization & authentication 
-- better styling
 
 ## Biggest Challenges
 - frontend update function was SUPER difficult
